@@ -1,0 +1,36 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$primaryDarkTextColor: hsl(0, 0%, 100%);
+$primaryDarkBgColor: hsl(0, 0%, 10%);
+$additionalColor: hsl(135, 100%, 45%);
+
+body {
+  color: $primaryDarkTextColor;
+  background-color: $primaryDarkBgColor;
+  font-size: 1.2rem;
+}
+
+// --- Header ---
+header {
+  margin: 0 20px;
+
+  .primaryDescription {
+    padding: 40px 0;
+
+    h2 {
+      color: $additionalColor;
+    }
+  }
+
+  .secoundaryDescription {
+    border: 2px solid $additionalColor;
+    border-radius: 0px 16px 16px 16px;
+    padding: 10px;
+    text-align: center;
+
+  }
+}
