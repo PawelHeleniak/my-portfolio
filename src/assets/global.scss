@@ -6,6 +6,7 @@
 
 $primaryDarkTextColor: hsl(0, 0%, 100%);
 $primaryDarkBgColor: hsl(0, 0%, 10%);
+$secoundaryDarkBgColor: hsl(0, 0%, 15%);
 $additionalColor: hsl(135, 100%, 45%);
 
 body {
@@ -40,7 +41,7 @@ header {
 }
 
 // --- Skills ---
-section {
+.wrapper.skills {
   margin: 0 20px;
 
   .skillList {
@@ -50,7 +51,7 @@ section {
     }
 
     .skillBox {
-      background-color: hsl(0, 0%, 15%);
+      background-color: $secoundaryDarkBgColor;
       border-radius: 6px;
       display: flex;
       flex-direction: column;
@@ -72,9 +73,42 @@ section {
         .progress {
           background-color: $additionalColor;
           position: absolute;
-          // width: 60%;
           height: 100%;
         }
+      }
+    }
+  }
+}
+
+// --- Projects ---
+.wrapper.projects {
+  margin: 0 20px;
+
+  .project {
+    border: 2px solid $secoundaryDarkBgColor;
+    border-radius: 6px;
+    overflow: hidden;
+
+    .projectImage {
+      img {
+        width: 100%;
+      }
+    }
+
+    .projectDescription {
+      padding: 10px;
+    }
+
+    .projectLink {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+
+      a {
+        color: $additionalColor;
+        text-decoration: none;
+        padding: 10px;
+        border: 1px solid $additionalColor;
       }
     }
   }
