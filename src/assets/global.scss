@@ -16,12 +16,11 @@ body {
 }
 
 .wrapper {
-  padding: 60px 0;
+  margin: 20px;
 }
 
 // --- Header ---
 header {
-  margin: 0 20px;
 
   .primaryDescription {
     padding-bottom: 40px;
@@ -42,7 +41,6 @@ header {
 
 // --- Skills ---
 .wrapper.skills {
-  margin: 0 20px;
 
   .skillList {
 
@@ -82,12 +80,12 @@ header {
 
 // --- Projects ---
 .wrapper.projects {
-  margin: 0 20px;
 
   .project {
     border: 2px solid $secoundaryDarkBgColor;
     border-radius: 6px;
     overflow: hidden;
+    margin-bottom: 20px;
 
     .projectImage {
       img {
@@ -111,5 +109,20 @@ header {
         border: 1px solid $additionalColor;
       }
     }
+  }
+}
+
+// --- Contact ---
+.wrapper.contact {
+
+  .iconContainer {
+    display: flex;
+
+    a {
+      img {
+        width: 32px;
+      }
+    }
+
   }
 }
