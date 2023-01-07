@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './assets/global.scss';
+import './assets/scss/global.scss';
 import reportWebVitals from './reportWebVitals';
 import { HomePage } from './pages/HomePage/HomePage';
 

@@ -1,0 +1,27 @@
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@mixin slideRight($delay) {
+  animation: slideRight 1s $delay ease-in both;
+}
+
+@keyframes appereance {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin appereance($delay) {
+  animation: appereance 1s $delay ease-in both;
+}

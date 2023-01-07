@@ -1,17 +1,15 @@
+@use 'variables' as v;
+@use 'animation' as a;
+
 * {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
 }
 
-$primaryDarkTextColor: hsl(0, 0%, 100%);
-$primaryDarkBgColor: hsl(0, 0%, 10%);
-$secoundaryDarkBgColor: hsl(0, 0%, 15%);
-$additionalColor: hsl(135, 100%, 45%);
-
 body {
-  color: $primaryDarkTextColor;
-  background-color: $primaryDarkBgColor;
+  color: v.$primaryDarkTextColor;
+  background-color: v.$primaryDarkBgColor;
   font-size: 1.2rem;
 }
 
@@ -21,21 +19,33 @@ body {
 
 // --- Header ---
 header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .primaryDescription {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 
-    h2 {
-      color: $additionalColor;
+    h1.first {
+      color: v.$additionalColor;
+      @include a.slideRight(0s);
+    }
+
+    h1.secound {
+      color: v.$additionalColor;
+      @include a.slideRight(0.5s);
+    }
+
+    h2.third {
+      color: v.$additionalColor;
+      @include a.slideRight(1s);
     }
   }
 
   .secoundaryDescription {
-    border: 2px solid $additionalColor;
-    border-radius: 0px 16px 16px 16px;
-    padding: 10px;
     text-align: center;
-
+    @include a.appereance(1s)
   }
 }
 
@@ -49,7 +59,7 @@ header {
     }
 
     .skillBox {
-      background-color: $secoundaryDarkBgColor;
+      background-color: v.$secoundaryDarkBgColor;
       border-radius: 6px;
       display: flex;
       flex-direction: column;
@@ -69,7 +79,7 @@ header {
         position: relative;
 
         .progress {
-          background-color: $additionalColor;
+          background-color: v.$additionalColor;
           position: absolute;
           height: 100%;
         }
@@ -82,7 +92,7 @@ header {
 .wrapper.projects {
 
   .project {
-    border: 2px solid $secoundaryDarkBgColor;
+    border: 2px solid v.$secoundaryDarkBgColor;
     border-radius: 6px;
     overflow: hidden;
     margin-bottom: 20px;
@@ -103,10 +113,10 @@ header {
       padding: 10px;
 
       a {
-        color: $additionalColor;
+        color: v.$additionalColor;
         text-decoration: none;
         padding: 10px;
-        border: 1px solid $additionalColor;
+        border: 1px solid v.$additionalColor;
       }
     }
   }
