@@ -1,72 +1,65 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import { Skill } from './Skill'
+//Gsap
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export const Skills = () => {
   const allSkills = [
     {
       name: "Html",
       percent: "60%",
-      use: "yes",
     },
     {
       name: "Css / Scss",
       percent: "60%",
-      use: "yes",
     },
     {
       name: "JavaScript",
       percent: "40%",
-      use: "yes",
     },
     {
       name: "React",
       percent: "50%",
-      use: "yes",
     },
     {
       name: "Node.js",
       percent: "30%",
-      use: "yes",
     },
     {
       name: "Express.js",
       percent: "30%",
-      use: "yes",
     },
     {
       name: "MongoDB",
       percent: "30%",
-      use: "yes",
     },
     {
       name: "Git / Github",
       percent: "60%",
-      use: "yes",
-    },
-    {
-      name: "Vue",
-      percent: "0%",
-      use: "no",
-    },
-    {
-      name: "TypeScript",
-      percent: "0%",
-      use: "no",
-    },
+    }
   ]
-  const skillUsed = allSkills.filter(val => val.use === "yes").map(val => <Skill name={val.name} percent={val.percent} />)
-  const skillToLearn = allSkills.filter(val => val.use === "no").map(val => <Skill name={val.name} percent={val.percent} />)
+  const skill = allSkills.map(val => <Skill name={val.name} percent={val.percent} />)
+
+  const ref = useRef(null)
+  useEffect(() => {
+    const el = ref.current.querySelectorAll('.skillBox');
+
+    gsap.fromTo(el, { y: '+100', opacity: 0 }, {
+      y: '0', opacity: 1, stagger: 0.3, duration: 1, scrollTrigger: {
+        trigger: el,
+        start: "top 60%",
+      }
+    })
+  })
 
   return (
     <section>
       <div className="wrapper skills">
-        <div className="skillList">
+        <div className="skillList" ref={ref}>
           <h2>Programs that I use and still learn</h2>
-          {skillUsed}
-        </div>
-        <div className="skillList">
-          <h2>Programs that I want to learn</h2>
-          {skillToLearn}
+          {skill}
         </div>
       </div>
     </section>
