@@ -18,7 +18,7 @@ export const Projects = () => {
       name: "TicTacToe game",
       description: "This is a 2-player game where you take turns in which by turns put crosses and circle. The ability to play with a bot is added",
       img: tictactoeImg,
-      imgAlt: "Tic Tac Toe is simple game",
+      imgAlt: "Tic Tac Toe game",
       link: "https://pawelheleniak.github.io/tictactoe-app/",
     },
   ]

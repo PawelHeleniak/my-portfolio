@@ -44,10 +44,10 @@ export const Skills = () => {
 
   const ref = useRef(null)
   useEffect(() => {
-    const el = ref.current.querySelectorAll('.skillBox');
+    const el = ref.current.querySelectorAll('.progress');
 
-    gsap.fromTo(el, { y: '+100', opacity: 0 }, {
-      y: '0', opacity: 1, stagger: 0.2, duration: 1, scrollTrigger: {
+    gsap.fromTo(el, { x: '-100%' }, {
+      x: '0', stagger: 0.1, scrollTrigger: {
         trigger: el,
         start: "top 70%",
       }

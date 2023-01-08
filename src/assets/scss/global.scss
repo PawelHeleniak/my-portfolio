@@ -108,6 +108,7 @@ header {
 
 // --- Projects ---
 .wrapper.projects {
+  padding-bottom: 80px;
 
   .project {
     box-shadow: 0px 0px 10px 2px v.$secoundaryDarkBgColor;
@@ -166,14 +167,25 @@ header {
 }
 
 // --- Contact ---
+
 .wrapper.contact {
+  margin: 0;
+  background-color: v.$secoundaryDarkBgColor;
+  padding: 20px;
 
   .iconContainer {
     display: flex;
+    padding-top: 20px;
 
     a {
+      border: 2px solid v.$primaryDarkBgColor;
+      border-radius: 50%;
+      padding: 10px;
+      display: flex;
+
       img {
-        width: 32px;
+        width: 24px;
+        height: 24px;
       }
     }
 
