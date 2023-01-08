@@ -47,9 +47,9 @@ export const Skills = () => {
     const el = ref.current.querySelectorAll('.skillBox');
 
     gsap.fromTo(el, { y: '+100', opacity: 0 }, {
-      y: '0', opacity: 1, stagger: 0.3, duration: 1, scrollTrigger: {
+      y: '0', opacity: 1, stagger: 0.2, duration: 1, scrollTrigger: {
         trigger: el,
-        start: "top 60%",
+        start: "top 70%",
       }
     })
   })
@@ -57,6 +57,9 @@ export const Skills = () => {
   return (
     <section>
       <div className="wrapper skills">
+        <div className="sectionTitle">
+          <h2>My skills</h2>
+        </div>
         <div className="skillList" ref={ref}>
           <h2>Programs that I use and still learn</h2>
           {skill}

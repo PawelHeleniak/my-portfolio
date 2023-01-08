@@ -15,6 +15,22 @@ body {
 
 .wrapper {
   margin: 20px;
+
+  .sectionTitle {
+    position: relative;
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    width: max-content;
+  }
+
+  .sectionTitle:before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: v.$additionalColor;
+    bottom: 0;
+  }
 }
 
 // --- Header ---
@@ -51,6 +67,8 @@ header {
 
 // --- Skills ---
 .wrapper.skills {
+  padding-bottom: 80px;
+  // height: 100vh;
 
   .skillList {
 
@@ -60,7 +78,7 @@ header {
 
     .skillBox {
       background-color: v.$secoundaryDarkBgColor;
-      border-radius: 6px;
+      border-radius: 10px;
       display: flex;
       flex-direction: column;
       padding: 10px;
@@ -75,7 +93,7 @@ header {
         width: 100%;
         height: 10px;
         overflow: hidden;
-        border-radius: 5px;
+        border-radius: 10px;
         position: relative;
 
         .progress {
@@ -92,31 +110,56 @@ header {
 .wrapper.projects {
 
   .project {
-    border: 2px solid v.$secoundaryDarkBgColor;
-    border-radius: 6px;
+    box-shadow: 0px 0px 10px 2px v.$secoundaryDarkBgColor;
+    border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;
 
     .projectImage {
       img {
         width: 100%;
+        height: 250px;
       }
     }
 
     .projectDescription {
       padding: 10px;
+
+      .title {
+        position: relative;
+        width: max-content;
+        margin: 0;
+        margin-bottom: 10px;
+
+        h3 {
+          padding-left: 5px;
+        }
+
+      }
+
+      .title:before {
+        content: '';
+        position: absolute;
+        width: 3px;
+        height: 100%;
+        background-color: v.$additionalColor;
+        border-radius: 6px;
+      }
     }
 
     .projectLink {
       display: flex;
       justify-content: center;
-      padding: 10px;
+      padding: 0 10px 10px 10px;
 
       a {
         color: v.$additionalColor;
         text-decoration: none;
+        text-align: center;
         padding: 10px;
         border: 1px solid v.$additionalColor;
+        border-radius: 10px;
+        width: 100%;
       }
     }
   }

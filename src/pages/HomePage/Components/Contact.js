@@ -8,6 +8,9 @@ export const Contact = () => {
   return (
     <section>
       <div className="wrapper contact">
+        <div className="sectionTitle">
+          <h2>Contact</h2>
+        </div>
         <div className="information">
           <p>Paweł Heleniak</p>
           <p>Lublin, Poland</p>
