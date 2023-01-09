@@ -1,5 +1,6 @@
 @use 'variables' as v;
 @use 'animation' as a;
+@use 'media-screen' as ms;
 
 * {
   margin: 0 auto;
@@ -21,16 +22,17 @@ body {
     margin: 0 0 15px 0;
     padding-bottom: 5px;
     width: max-content;
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background-color: v.$additionalColor;
+      bottom: 0;
+    }
   }
 
-  .sectionTitle:before {
-    content: '';
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background-color: v.$additionalColor;
-    bottom: 0;
-  }
 }
 
 // --- Header ---
@@ -111,58 +113,77 @@ header {
   padding-bottom: 80px;
 
   .project {
+    @include ms.tablet {
+      display: flex;
+    }
+
     box-shadow: 0px 0px 10px 2px v.$secoundaryDarkBgColor;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;
 
     .projectImage {
+      @include ms.tablet {
+        width: 35%;
+      }
+
       img {
         width: 100%;
-        height: 250px;
+        height: 100%;
       }
     }
 
-    .projectDescription {
-      padding: 10px;
+    .informationWrapper {
 
-      .title {
-        position: relative;
-        width: max-content;
-        margin: 0;
-        margin-bottom: 10px;
+      @include ms.tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 65%;
+      }
 
-        h3 {
-          padding-left: 5px;
+      .projectDescription {
+        padding: 10px;
+
+        .title {
+          position: relative;
+          width: max-content;
+          margin: 0;
+          margin-bottom: 10px;
+
+          h3 {
+            padding-left: 5px;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            background-color: v.$additionalColor;
+            border-radius: 6px;
+          }
         }
 
       }
 
-      .title:before {
-        content: '';
-        position: absolute;
-        width: 3px;
-        height: 100%;
-        background-color: v.$additionalColor;
-        border-radius: 6px;
+      .projectLink {
+        display: flex;
+        justify-content: center;
+        padding: 0 10px 10px 10px;
+
+        a {
+          color: v.$additionalColor;
+          text-decoration: none;
+          text-align: center;
+          padding: 10px 20px;
+          border: 1px solid v.$additionalColor;
+          border-radius: 10px;
+          width: 100%;
+        }
       }
     }
 
-    .projectLink {
-      display: flex;
-      justify-content: center;
-      padding: 0 10px 10px 10px;
-
-      a {
-        color: v.$additionalColor;
-        text-decoration: none;
-        text-align: center;
-        padding: 10px;
-        border: 1px solid v.$additionalColor;
-        border-radius: 10px;
-        width: 100%;
-      }
-    }
   }
 }
 

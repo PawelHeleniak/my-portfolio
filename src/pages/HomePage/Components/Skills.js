@@ -49,7 +49,7 @@ export const Skills = () => {
     gsap.fromTo(el, { x: '-100%' }, {
       x: '0', stagger: 0.1, scrollTrigger: {
         trigger: el,
-        start: "top 70%",
+        start: "top 60%",
       }
     })
   })
