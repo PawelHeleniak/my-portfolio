@@ -61,7 +61,6 @@ export const Skills = () => {
           <h2>My skills</h2>
         </div>
         <div className="skillList" ref={ref}>
-          <h2>Programs that I use and still learn</h2>
           {skill}
         </div>
       </div>
