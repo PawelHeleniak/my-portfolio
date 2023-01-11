@@ -7,7 +7,7 @@ import downloadCv from '../../../assets/files/Pawel_Heleniak_CV_P.pdf'
 export const Contact = () => {
 
   return (
-    <section>
+    <section id='contact'>
       <div className="wrapper contact">
         <div className="sectionTitle">
           <h2>Contact</h2>

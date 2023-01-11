@@ -55,7 +55,7 @@ export const Skills = () => {
   })
 
   return (
-    <section>
+    <section id='skills'>
       <div className="wrapper skills">
         <div className="sectionTitle">
           <h2>My skills</h2>

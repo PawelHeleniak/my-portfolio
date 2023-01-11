@@ -1,15 +1,27 @@
-@keyframes slideRight {
+@keyframes slideTop {
   0% {
-    transform: translateX(-100%);
+    transform: translateY(100%);
+    opacity: 0;
   }
 
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-@mixin slideRight($delay) {
-  animation: slideRight 1s $delay ease-in both;
+@keyframes moving {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(50%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes appereance {
@@ -21,6 +33,16 @@
     opacity: 1;
   }
 }
+
+@mixin slideTop($delay) {
+  animation: slideTop 0.5s $delay ease-in both;
+}
+
+
+@mixin moving($delay) {
+  animation: appereance 1s 0s, moving 3s $delay linear both infinite;
+}
+
 
 @mixin appereance($delay) {
   animation: appereance 1s $delay ease-in both;

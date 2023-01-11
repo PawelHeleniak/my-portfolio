@@ -25,10 +25,10 @@ export const Projects = () => {
   const project = allProjects.map(val => <Project value={val} />)
 
   return (
-    <section>
+    <section id='projects'>
       <div className="wrapper projects">
         <div className="sectionTitle">
-          <h2>My projects</h2>
+          <h2>My works</h2>
         </div>
         {project}
       </div>

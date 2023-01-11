@@ -8,14 +8,25 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: v.$primaryDarkTextColor;
   background-color: v.$primaryDarkBgColor;
   font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: v.$primaryDarkTextColor;
 }
 
 .wrapper {
   margin: 20px;
+
 
   .sectionTitle {
     position: relative;
@@ -41,36 +52,84 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 10vh;
 
   .primaryDescription {
     padding-bottom: 20px;
 
-    h1.first {
-      color: v.$additionalColor;
-      @include a.slideRight(0s);
+    .headingBox {
+      overflow: hidden;
     }
 
-    h1.secound {
-      color: v.$additionalColor;
-      @include a.slideRight(0.5s);
+    .headingBox.first {
+      h1 {
+        @include a.slideTop(0s);
+      }
+
+      &.secound {
+        h2 {
+          @include a.slideTop(0.1s);
+        }
+      }
+
+      &.third {
+        h2 {
+          @include a.slideTop(0.2s);
+        }
+      }
     }
 
-    h2.third {
-      color: v.$additionalColor;
-      @include a.slideRight(1s);
+    .headingBox.secound {
+      h2 {
+        @include a.slideTop(0.1s);
+      }
+    }
+
+    .headingBox.third {
+      h2 {
+        @include a.slideTop(0.2s);
+      }
     }
   }
 
   .secoundaryDescription {
-    text-align: center;
+    padding-bottom: 20px;
     @include a.appereance(1s)
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include a.appereance(1s);
+
+    h3 {
+      padding-bottom: 5px;
+    }
+  }
+
+  .scrollDown {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+
+    .arrow {
+
+      img {
+        @include a.moving(1s);
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
   }
 }
 
 // --- Skills ---
 .wrapper.skills {
   padding-bottom: 80px;
-  // height: 100vh;
 
   .skillList {
 

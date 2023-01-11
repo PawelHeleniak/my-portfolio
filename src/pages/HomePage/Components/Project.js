@@ -13,7 +13,7 @@ export const Project = (props) => {
     const el = ref.current;
 
     gsap.fromTo(el, { opacity: 0, y: '50' }, {
-      opacity: 1, y: '0', duration: 1, scrollATrigger: {
+      opacity: 1, y: '0', duration: 1, scrollTrigger: {
         trigger: el,
         start: "top 60%",
       }
