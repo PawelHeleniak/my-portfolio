@@ -59,11 +59,15 @@ header {
 
     .headingBox {
       overflow: hidden;
-    }
 
-    .headingBox.first {
-      h1 {
-        @include a.slideTop(0s);
+      &.first {
+        h2 {
+          @include ms.tablet {
+            font-size: 2em
+          }
+
+          @include a.slideTop(0s);
+        }
       }
 
       &.secound {
@@ -76,18 +80,6 @@ header {
         h2 {
           @include a.slideTop(0.2s);
         }
-      }
-    }
-
-    .headingBox.secound {
-      h2 {
-        @include a.slideTop(0.1s);
-      }
-    }
-
-    .headingBox.third {
-      h2 {
-        @include a.slideTop(0.2s);
       }
     }
   }

@@ -7,10 +7,10 @@ export const Header = () => {
       <div className="wrapper header">
         <div className="primaryDescription">
           <div className="headingBox first">
-            <h1>Hello,</h1>
+            <h2>Hello,</h2>
           </div>
           <div className="headingBox secound">
-            <h2>I`m Paweł</h2>
+            <h2>I`m Paweł Heleniak</h2>
           </div>
           <div className="headingBox third">
             <h2>Front end developer</h2>
