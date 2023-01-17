@@ -16,7 +16,7 @@ body {
   color: v.$primaryDarkTextColor;
   background-color: v.$primaryDarkBgColor;
   font-size: 1.2rem;
-  font-family: sans-serif;
+  font-family: v.$font-stack;
 }
 
 a {
@@ -25,8 +25,11 @@ a {
 }
 
 .wrapper {
-  margin: 20px;
+  @include ms.tablet {
+    margin: 20px 40px;
+  }
 
+  margin: 20px;
 
   .sectionTitle {
     position: relative;
@@ -239,11 +242,14 @@ header {
 }
 
 // --- Contact ---
+section#contact {
+  background-color: v.$secoundaryDarkBgColor;
+  overflow: hidden;
+}
 
 .wrapper.contact {
-  margin: 0;
-  background-color: v.$secoundaryDarkBgColor;
-  padding: 20px;
+  margin-bottom: 0;
+  padding: 20px 0;
 
   .iconContainer {
     display: flex;

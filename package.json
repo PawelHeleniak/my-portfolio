@@ -1,6 +1,6 @@
 {
-  "homepage": "https://pawelheleniak.github.io/portfolio-website/",
-  "name": "portfolio-website",
+  "homepage": "https://pawelheleniak.github.io/my-portfolio/",
+  "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
