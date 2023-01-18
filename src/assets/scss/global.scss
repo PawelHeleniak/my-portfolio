@@ -333,11 +333,19 @@ section#contact {
 }
 
 .wrapper.contact {
-  margin-bottom: 0;
+  @include ms.desktop {
+    padding: 20px 40px;
+  }
+
   padding: 20px 0;
 
   .iconContainer {
+    @include ms.desktop {
+      justify-content: space-evenly;
+    }
+
     display: flex;
+    justify-content: space-between;
     padding-top: 20px;
 
     a {

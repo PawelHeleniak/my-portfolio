@@ -21,6 +21,13 @@ export const Projects = () => {
       imgAlt: "Tic Tac Toe game",
       link: "https://pawelheleniak.github.io/tictactoe-app/",
     },
+    {
+      name: "Holiday rental website",
+      description: "Site for renting cottages or hotels for a trip",
+      // img: ,
+      imgAlt: "Holiday rental website",
+      link: "https://pawelheleniak.github.io/holiday-rental-website/",
+    },
   ]
   const project = allProjects.map(val => <Project value={val} />)
 
