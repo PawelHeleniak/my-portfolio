@@ -20,7 +20,7 @@ export const Contact = () => {
     gsap.fromTo(el, { y: '-100%', opacity: 0 }, {
       y: '0', opacity: 1, duration: 1, scrollTrigger: {
         trigger: el,
-        start: "top 50%",
+        start: "bottom 90%",
       }
     })
   })
