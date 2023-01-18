@@ -28,7 +28,7 @@ export const Projects = () => {
     <section id='projects'>
       <div className="wrapper projects">
         <div className="sectionTitle">
-          <h2>My works</h2>
+          <h2>My projects</h2>
         </div>
         {project}
       </div>

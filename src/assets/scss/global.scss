@@ -17,10 +17,6 @@ body {
   background-color: v.$primaryDarkBgColor;
   font-size: 1.2rem;
   font-family: v.$font-stack;
-
-  @include ms.desktop {
-    font-size: 1.4rem;
-  }
 }
 
 a {
@@ -61,6 +57,10 @@ a {
 
 // --- Header ---
 header {
+  @include ms.desktop {
+    font-size: 1.4rem;
+  }
+
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -213,10 +213,6 @@ header {
       }
 
       .progressBar {
-        @include ms.desktop {
-          height: 25px;
-        }
-
         background-color: hsl(135deg, 100%, 20%);
         width: 100%;
         height: 20px;
@@ -306,6 +302,10 @@ header {
         padding: 0 10px 10px 10px;
 
         a {
+          @include ms.desktop {
+            width: max-content;
+          }
+
           color: v.$additionalColor;
           text-decoration: none;
           text-align: center;
@@ -313,6 +313,12 @@ header {
           border: 1px solid v.$additionalColor;
           border-radius: 10px;
           width: 100%;
+          transition: all .2s ease-in;
+
+          &:hover {
+            color: v.$primaryDarkTextColor;
+            background-color: v.$additionalColor;
+          }
         }
       }
     }
