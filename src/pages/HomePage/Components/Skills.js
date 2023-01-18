@@ -25,19 +25,19 @@ export const Skills = () => {
     },
     {
       name: "Node.js",
-      percent: "30%",
+      percent: "25%",
     },
     {
       name: "Express.js",
-      percent: "30%",
+      percent: "25%",
     },
     {
       name: "MongoDB",
-      percent: "30%",
+      percent: "25%",
     },
     {
       name: "Git / Github",
-      percent: "60%",
+      percent: "50%",
     }
   ]
   const skill = allSkills.map(val => <Skill name={val.name} percent={val.percent} />)
