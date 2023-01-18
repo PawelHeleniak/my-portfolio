@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.c944f6b8.css",
+    "main.js": "/my-portfolio/static/js/main.10ddbc33.js",
+    "static/js/787.128fc6e9.chunk.js": "/my-portfolio/static/js/787.128fc6e9.chunk.js",
+    "static/media/todo-app.png": "/my-portfolio/static/media/todo-app.43a118947f2b0ecc9013.png",
+    "static/media/Pawel_Heleniak_CV_P.pdf": "/my-portfolio/static/media/Pawel_Heleniak_CV_P.f748e5908a92f81c7f8e.pdf",
+    "static/media/tictactoe-app.png": "/my-portfolio/static/media/tictactoe-app.f041647d90160353883f.png",
+    "index.html": "/my-portfolio/index.html",
+    "static/media/down_arrow.svg": "/my-portfolio/static/media/down_arrow.647ad79f25b04f974978af57977426ef.svg",
+    "main.c944f6b8.css.map": "/my-portfolio/static/css/main.c944f6b8.css.map",
+    "main.10ddbc33.js.map": "/my-portfolio/static/js/main.10ddbc33.js.map",
+    "787.128fc6e9.chunk.js.map": "/my-portfolio/static/js/787.128fc6e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c944f6b8.css",
+    "static/js/main.10ddbc33.js"
+  ]
+}
