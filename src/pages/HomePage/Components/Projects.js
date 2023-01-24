@@ -4,6 +4,7 @@ import { Project } from './Project'
 //img
 import todoImg from '../../../assets/img/todo-app.png'
 import tictactoeImg from '../../../assets/img/tictactoe-app.png'
+import holidayRentalImg from '../../../assets/img/holiday-rental.png'
 
 export const Projects = () => {
   const allProjects = [
@@ -24,7 +25,7 @@ export const Projects = () => {
     {
       name: "Holiday rental website",
       description: "Site for renting cottages or hotels for a trip",
-      // img: ,
+      img: holidayRentalImg,
       imgAlt: "Holiday rental website",
       link: "https://pawelheleniak.github.io/holiday-rental-website/",
     },

@@ -25,15 +25,15 @@ export const Skills = () => {
     },
     {
       name: "Node.js",
-      percent: "25%",
+      percent: "20%",
     },
     {
       name: "Express.js",
-      percent: "25%",
+      percent: "20%",
     },
     {
       name: "MongoDB",
-      percent: "25%",
+      percent: "20%",
     },
     {
       name: "Git / Github",
