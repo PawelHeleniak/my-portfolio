@@ -1,6 +1,15 @@
-$primaryDarkTextColor: hsl(0, 0%, 100%);
-$primaryDarkBgColor: hsl(220, 10%, 15%);
-$secoundaryDarkBgColor: hsl(220, 10%, 20%);
-$additionalColor: hsl(135, 100%, 45%);
+//text color  
+$text-color-light: hsl(0, 0%, 100%);
+$text-color-light-85: hsl(0, 0%, 85%);
+$text-color-dark: hsl(0, 0%, 20%);
 
+//background color
+$bg-color-dark: hsl(220, 10%, 15%);
+$bg-color-dark-20: hsl(220, 10%, 20%);
+
+//other color
+$additional-color-green: hsl(135, 100%, 45%);
+$additional-color-green-2: hsl(135, 90%, 28%);
+
+//font
 $font-stack: sans-serif;

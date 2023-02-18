@@ -13,15 +13,15 @@ html {
 }
 
 body {
-  color: v.$primaryDarkTextColor;
-  background-color: v.$primaryDarkBgColor;
-  font-size: 1.2rem;
+  color: v.$text-color-light;
+  background-color: v.$bg-color-dark;
+  font-size: 1.1rem;
   font-family: v.$font-stack;
 }
 
 a {
   text-decoration: none;
-  color: v.$primaryDarkTextColor;
+  color: v.$text-color-light;
 }
 
 .wrapper {
@@ -37,7 +37,7 @@ a {
 
   margin: 20px;
 
-  .sectionTitle {
+  .section-title {
     position: relative;
     margin: 0 0 20px 0;
     padding-bottom: 5px;
@@ -48,7 +48,7 @@ a {
       position: absolute;
       height: 3px;
       width: 100%;
-      background-color: v.$additionalColor;
+      background-color: v.$additional-color-green;
       bottom: 0;
     }
   }
@@ -60,14 +60,23 @@ header {
   @include ms.desktop {
     font-size: 1.4rem;
   }
-
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 10vh;
-
+  
+  &::before{
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    background: radial-gradient(circle, v.$bg-color-dark-20 15%, v.$bg-color-dark 40%);
+    left: -100%;
+    top: -100%;
+  }
   .wrapper.header {
+
     @include ms.desktop {
       display: flex;
 
@@ -100,11 +109,7 @@ header {
         overflow: hidden;
 
         &.first {
-          h2 {
-            @include ms.tablet {
-              font-size: 2em
-            }
-
+          h1 {
             @include a.slideTop(0s);
           }
         }
@@ -122,7 +127,7 @@ header {
         }
 
         span {
-          color: v.$additionalColor;
+          color: v.$additional-color-green;
         }
       }
     }
@@ -155,7 +160,7 @@ header {
             width: 100%;
             height: 3px;
             bottom: 0;
-            background-color: v.$additionalColor;
+            background-color: v.$additional-color-green;
             border-radius: 6px;
             transform: translateX(-110%);
             transition: transform 0.3s ease;
@@ -195,24 +200,25 @@ header {
 .wrapper.skills {
   padding-bottom: 80px;
 
-  .skillList {
+  .skill-list {
 
     h2 {
       margin-bottom: 10px;
     }
 
-    .skillBox {
+    .skill-box {
+      border: 1px solid v.$bg-color-dark-20;
       border-radius: 10px;
       display: flex;
       flex-direction: column;
-      padding: 5px 0;
+      padding: 10px;
       margin-bottom: 20px;
 
       p {
         padding-bottom: 10px;
       }
 
-      .progressBar {
+      .progress-bar {
         background-color: hsl(135deg, 100%, 20%);
         width: 100%;
         height: 20px;
@@ -221,17 +227,15 @@ header {
         position: relative;
 
         .progress {
-          background-color: v.$additionalColor;
+          background-color: v.$additional-color-green;
           position: absolute;
           height: 100%;
           overflow: hidden;
         }
-
-        span {
-          position: absolute;
-          right: 0;
-          padding-right: 5px;
-        }
+      }
+      .description{
+        color: v.$text-color-light-85;
+        padding-top: 10px;
       }
     }
   }
@@ -246,7 +250,7 @@ header {
       display: flex;
     }
 
-    box-shadow: 0px 0px 10px 2px v.$secoundaryDarkBgColor;
+    box-shadow: 0px 0px 10px 2px v.$bg-color-dark-20;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;
@@ -289,7 +293,7 @@ header {
             position: absolute;
             width: 3px;
             height: 100%;
-            background-color: v.$additionalColor;
+            background-color: v.$additional-color-green;
             border-radius: 6px;
           }
         }
@@ -306,18 +310,18 @@ header {
             width: max-content;
           }
 
-          color: v.$additionalColor;
+          color: v.$additional-color-green;
           text-decoration: none;
           text-align: center;
           padding: 10px 20px;
-          border: 1px solid v.$additionalColor;
+          border: 1px solid v.$additional-color-green;
           border-radius: 10px;
           width: 100%;
           transition: all .2s ease-in;
 
           &:hover {
-            color: v.$primaryDarkTextColor;
-            background-color: v.$additionalColor;
+            color: v.$text-color-light;
+            background-color: v.$additional-color-green;
           }
         }
       }
@@ -328,7 +332,7 @@ header {
 
 // --- Contact ---
 section#contact {
-  background-color: v.$secoundaryDarkBgColor;
+  background-color: v.$bg-color-dark-20;
   overflow: hidden;
 }
 
@@ -349,7 +353,7 @@ section#contact {
     padding-top: 20px;
 
     a {
-      border: 2px solid v.$primaryDarkBgColor;
+      border: 2px solid v.$bg-color-dark;
       border-radius: 50%;
       padding: 10px;
       display: flex;
