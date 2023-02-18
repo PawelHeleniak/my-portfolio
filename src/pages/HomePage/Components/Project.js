@@ -22,17 +22,17 @@ export const Project = (props) => {
 
   return (
     <div className="project" ref={ref}>
-      <div className="projectImage">
+      <div className="project-image">
         <img src={img} alt={imgAlt} />
       </div>
-      <div className="informationWrapper">
-        <div className="projectDescription">
+      <div className="information-wrapper">
+        <div className="project-description">
           <div className="title">
             <h3>{name}</h3>
           </div>
           <p>{description}</p>
         </div>
-        <div className="projectLink">
+        <div className="project-link">
           <a href={link}>Demo</a>
         </div>
       </div>

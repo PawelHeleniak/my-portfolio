@@ -28,18 +28,26 @@ export const Contact = () => {
   return (
     <section id='contact'>
       <div className="wrapper contact" ref={ref}>
-        <div className="sectionTitle">
+        <div className="section-title">
           <h2>Contact</h2>
         </div>
         <div className="information">
           <p>Paweł Heleniak</p>
           <p>Lublin, Poland</p>
         </div>
-        <div className="iconContainer">
-          <a href="https://github.com/PawelHeleniak"><img src={githubIcon} alt="Github profile" /></a>
-          <a href="https://linkedin.com/in/paweł-heleniak-1882b2231"><img src={linkedinIcon} alt="Linkedin profile" /></a>
-          <a href="mailto:pawel.heleniak@outlook.com"><img src={emailIcon} alt="Write an email" /></a>
-          <a href={downloadCv} download><img src={cvIcon} alt="Download CV" /></a>
+        <div className="icon-container">
+          <div className="icon-box">
+            <a href="https://github.com/PawelHeleniak"><img src={githubIcon} alt="Github profile" /></a>
+          </div>
+          <div className="icon-box">
+            <a href="https://linkedin.com/in/paweł-heleniak-1882b2231"><img src={linkedinIcon} alt="Linkedin profile" /></a>
+          </div>
+          <div className="icon-box">
+            <a href="mailto:pawel.heleniak@outlook.com"><img src={emailIcon} alt="Write an email" /></a>
+          </div>
+          <div className="icon-box">
+            <a href={downloadCv} download><img src={cvIcon} alt="Download CV" /></a>
+          </div>
         </div>
       </div>
     </section>

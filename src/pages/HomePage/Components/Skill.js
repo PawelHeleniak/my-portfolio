@@ -7,9 +7,9 @@ export const Skill = ({ name, percent, description }) => {
       <div className="progress-bar">
         <div className="progress" style={{ "width": `${percent}`, }}></div>
       </div>
-      <div className="description">
+      {/* <div className="description">
         <span>{description}</span>
-      </div>
+      </div> */}
     </div >
   )
 }
