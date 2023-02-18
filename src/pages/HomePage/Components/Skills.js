@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import { Skill } from './Skill'
+
 //Gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
